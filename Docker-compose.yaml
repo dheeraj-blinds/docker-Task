@@ -1,0 +1,41 @@
+version: "3.7"
+
+services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      SA_PASSWORD: Password1234!
+      ACCEPT_EULA: Y
+    ports:
+      - 5555:1433
+      - 5554:1434
+    volumes:
+      - sqlvolume:/var/opt/sql-server
+  backend-server:
+    image: backend-server
+    build:
+      context: ./backend/.
+      dockerfile: Dockerfile
+      target: runtime
+    environment:
+      ConnectionStrings__BackendDb: "Data Source=sql-server;User Id=sa;Password=Password1234!"
+      ASPNETCORE_ENVIRONMENT: Development
+      APP_USER: compose
+    ports:
+      - 5065:80
+    depends_on:
+      - sql-server
+  frontend-app:
+   image: frontend-app
+   build:
+     context: ./front-end/.
+     dockerfile: Dockerfile
+     target: runtime
+   ports:
+     - 5066:80
+   depends_on:
+     - backend-server
+volumes:
+  sqlvolume:
+    external: true
+    name: sqlbackup
