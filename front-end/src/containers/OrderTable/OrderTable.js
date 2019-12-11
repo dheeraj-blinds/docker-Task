@@ -4,7 +4,7 @@ import '../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-a
 
 const OrderTable = (props) => {
     const tableOptions = {
-        page: 2,  // which page you want to show as default
+        page: 1,  // which page you want to show as default
       sizePerPageList: [ {
         text: '5', value: 5
       }, {
