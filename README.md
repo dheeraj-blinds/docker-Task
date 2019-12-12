@@ -8,4 +8,6 @@ Please complete the docker files and use the docker compose file to run all the 
 
 Make sure you create a docker volume by name sqlbackup
 
-Hint: use nginx server to host react app. 
+Please use nginx server to host react app. NGINX is a web server that is used to host static files.
+
+Docker file in the front-end project has comments that should help you to write the docker commands for react. 
