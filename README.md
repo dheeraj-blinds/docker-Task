@@ -5,4 +5,5 @@ The repo has 2 projects one
 In each of the application folders there is an empty docker file. 
 Please complete the docker files and use the docker compose file to run all the containers. 
 
-Make sure you create a docker volume by name 
+Make sure you create a docker volume by name sqlbackup
+Hint: use nginx server to host react app. 
