@@ -16,3 +16,7 @@ Docker file in the front-end application has comments for each step.
 If everything works out you should be able to see the following screen at http://localhost:5066
 
 ![Image description](https://github.com/dheeraj-blinds/docker-Task/blob/master/gabbar-front-end.PNG)
+
+add a product to cart go top the cart page and place order, you will be redirected to orders page.
+you should see a page like this 
+![result](https://github.com/dheeraj-blinds/docker-Task/blob/master/orderls-list.PNG)
