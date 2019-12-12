@@ -12,3 +12,5 @@ Use nginx server to host react app. NGINX is a web server that is used to host s
 You can find more info on NGINX at https://www.nginx.com/resources/glossary/nginx/
 
 Docker file in the front-end application has comments for each step.    
+
+If everything works out you should be able to see the following screen at http://localhost:5066
