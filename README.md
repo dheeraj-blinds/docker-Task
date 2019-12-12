@@ -4,7 +4,7 @@ The repo has 2 projects
  2. Asp.net core2.2 web api application. 
  
 In each of the application folders there is an empty docker file. 
-Please complete the docker files and use the docker compose file to run all the containers just like we did in the workshop.
+Clone this repo, complete the docker files and use the docker compose file to run all the containers just like we did in the workshop.
 
 Make sure to create a docker volume by name sqlbackup (docker volume create sqlbackup)
 
