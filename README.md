@@ -1,4 +1,4 @@
-# Docker Assignment 
+# Docker Workshop Task
 The repo has 2 projects one 
  1. A front end project with react app 
  2. A asp.net core2.2 web api application. 
