@@ -1,15 +1,13 @@
-# define the build stage by pulling in node image
+FROM node as build
 
+WORKDIR /app
+COPY package.json /app/
+RUN npm install
 
-#create a work directory 
-#copy package.json to the work directory
-# run npm install 
+COPY ./ /app/
+RUN npm run-script build
 
-#copy the contnets of current context to an app directory
-#run npm build script
-
-# define the runtime stage using nginx image
-#copy conets of build stage to nginx's home directory /app/build/ /usr/share/nginx/html
-
-#expose port 80 
-# add entyr point command  ["nginx","-g","daemon off;"]
+FROM nginx AS runtime
+COPY --from=build /app/build/ /usr/share/nginx/html
+EXPOSE 80
+ENTRYPOINT ["nginx","-g","daemon off;"]
