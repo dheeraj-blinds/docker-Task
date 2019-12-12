@@ -6,7 +6,7 @@ The repo has 2 projects
 In each of the application folders there is an empty docker file. 
 Please complete the docker files and use the docker compose file to run all the containers just like we did in the workshop.
 
-Make sure to create a docker volume by name sqlbackup
+Make sure to create a docker volume by name sqlbackup (docker volume create sqlbackup)
 
 Use nginx server to host react app. NGINX is a web server that is used to host static files.
 You can find more info on NGINX at https://www.nginx.com/resources/glossary/nginx/
