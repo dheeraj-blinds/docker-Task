@@ -11,4 +11,4 @@ Make sure to create a docker volume by name sqlbackup
 Use nginx server to host react app. NGINX is a web server that is used to host static files.
 You can find more info on NGINX at https://www.nginx.com/resources/glossary/nginx/
 
-Docker file in the front-end application has comments for each step needed to define the image.    
+Docker file in the front-end application has comments for each step.    
