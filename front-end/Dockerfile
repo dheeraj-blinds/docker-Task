@@ -12,4 +12,4 @@
 #copy conets of build stage to nginx's home directory /app/build/ /usr/share/nginx/html
 
 #expose port 80 
-# add entyr point command  ["nginx","-g","daemon off;"]
+# add entry point command  ["nginx","-g","daemon off;"]
