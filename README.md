@@ -14,3 +14,5 @@ You can find more info on NGINX at https://www.nginx.com/resources/glossary/ngin
 Docker file in the front-end application has comments for each step.    
 
 If everything works out you should be able to see the following screen at http://localhost:5066
+
+![Image description](https://github.com/dheeraj-blinds/docker-Task/blob/master/gabbar-front-end.PNG)
