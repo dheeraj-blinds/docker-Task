@@ -1,15 +1,13 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
-WORKDIR /app 
+FROM node as build
 
-COPY *.sln .
-COPY backend/*.csproj ./backend/
-RUN dotnet restore
-
-COPY backend/. ./backend
-WORKDIR /app/backend
-RUN dotnet publish -c Release -o out
-
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
 WORKDIR /app
-COPY --from=build /app/backend/out ./
-ENTRYPOINT ["dotnet", "backend.dll"]
+COPY package.json /app/
+RUN npm install
+
+COPY ./ /app/
+RUN npm run-script build
+
+FROM nginx AS runtime
+COPY --from=build /app/build/ /usr/share/nginx/html
+EXPOSE 80
+ENTRYPOINT ["nginx","-g","daemon off;"]
